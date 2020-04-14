@@ -25,7 +25,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t myapp-image .'
+                sh 'ansible-playbook ansible-playbook /home/opc/play.yml -i /home/opc/hosts'
             }
         }
     }

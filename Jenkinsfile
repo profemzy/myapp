@@ -25,7 +25,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t myapp-image .'
+                sh 'ansible-playbook /home/jenkins/play.yml -i /home/jenkins/hosts'
             }
         }
     }
